@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewitt Painting and Handyman Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ecf0f1;
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden; 
+        }
+        #webgl-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: block;
+        }
+        .content-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            pointer-events: none;
+        }
+        .content-section {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            scroll-snap-align: center;
+            pointer-events: auto;
+            background-color: transparent;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            padding: 2rem;
+            flex-shrink: 0;
+        }
+        .content-section.active {
+            opacity: 1;
+        }
+        .hero-title {
+            text-shadow: 0 0 10px #e67e22, 0 0 20px #e67e22;
+        }
+        .section-box {
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(230, 126, 34, 0.5);
+            border-radius: 1.5rem;
+            box-shadow: 0 0 25px rgba(230, 126, 34, 0.2);
+        }
+        .footer-style {
+            background: rgba(18, 18, 18, 0.7);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 25px rgba(230, 126, 34, 0.2);
+        }
+        #footer-section {
+            height: auto;
+            scroll-snap-align: end;
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="webgl-canvas"></canvas>
+    <div class="content-container" id="content-container">
+        <section class="content-section" id="hero-section">
+            <div class="text-center max-w-2xl">
+                <h1 class="hero-title text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+                    Quality You Can See, Service You Can Trust
+                </h1>
+                <p class="text-xl md:text-2xl mb-8">
+                    Providing exceptional painting and handyman services to the greater Nashville area.
+                </p>
+                <a href="#services-section" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                    Explore Our Services
+                </a>
+            </div>
+        </section>
+        <section class="content-section" id="services-section">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Comprehensive Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 section-box">
+                    <div class="p-4 rounded-xl text-white">
+                        <div class="text-4xl mb-2">🎨</div>
+                        <h3 class="text-xl font-bold">Interior Painting</h3>
+                        <p class="text-gray-300 text-sm">Transform your living space with a professional, flawless finish.</p>
+                    </div>
+                    <div class="p-4 rounded-xl text-white">
+                        <div class="text-4xl mb-2">🏠</div>
+                        <h3 class="text-xl font-bold">Exterior Painting</h3>
+                        <p class="text-gray-300 text-sm">Protect your home and boost its curb appeal with durable paint.</p>
+                    </div>
+                    <div class="p-4 rounded-xl text-white">
+                        <div class="text-4xl mb-2">🔨</div>
+                        <h3 class="text-xl font-bold">Drywall & Repairs</h3>
+                        <p class="text-gray-300 text-sm">From patching small holes to full replacements, we do it all.</p>
+                    </div>
+                    <div class="p-4 rounded-xl text-white">
+                        <div class="text-4xl mb-2">🪵</div>
+                        <h3 class="text-xl font-bold">Carpentry</h3>
+                        <p class="text-gray-300 text-sm">We handle a range of carpentry tasks, including trim and molding.</p>
+                    </div>
+                    <div class="p-4 rounded-xl text-white">
+                        <div class="text-4xl mb-2">💦</div>
+                        <h3 class="text-xl font-bold">Power Washing</h3>
+                        <p class="text-gray-300 text-sm">Revitalize your home's exterior, decks, and patios.</p>
+                    </div>
+                    <div class="p-4 rounded-xl text-white">
+                        <div class="text-4xl mb-2">🔧</div>
+                        <h3 class="text-xl font-bold">General Handyman</h3>
+                        <p class="text-gray-300 text-sm">Expert help for all those small-to-medium sized projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-section" id="about-section">
+            <div class="text-center p-8 section-box max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Commitment to You</h2>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    At Hewitt Painting and Handyman Services, we're not just about fixing and painting; we're about building trust. With years of experience serving the Nashville community, we stand by our reputation for meticulous work, clear communication, and unwavering reliability. We treat every home as if it were our own, ensuring every detail is handled with the utmost care.
+                </p>
+                <p class="text-gray-300 leading-relaxed">
+                    Our dedication to your satisfaction is our top priority. We're a family-owned business, and we look forward to making your home improvement dreams a reality.
+                </p>
+            </div>
+        </section>
+        <section class="content-section" id="contact-section">
+            <div class="text-center p-8 section-box max-w-2xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Get Your Free Estimate</h2>
+                <p class="mb-8 text-gray-300">
+                    Ready to start your project? We're just a phone call or email away. We look forward to hearing from you!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="tel:615-359-4372" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center gap-2">
+                        <span class="text-xl">📞</span> Call
+                    </a>
+                    <a href="mailto:hewittpainting01@yahoo.com" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center gap-2">
+                        <span class="text-xl">📧</span> Email for Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="content-section" id="footer-section">
+            <footer class="text-gray-500 py-8 footer-style w-full text-center">
+                <div class="container mx-auto px-4">
+                    <p class="text-sm">&copy; 2025 site built and designed by Andrew Thomas</p>
+                </div>
+            </footer>
+        </section>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('webgl-canvas');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({
+                canvas: canvas,
+                antialias: true,
+                alpha: true
+            });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            const pointLight = new THREE.PointLight(0xff7a00, 10, 100);
+            pointLight.position.set(0, 5, 5);
+            scene.add(pointLight);
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 5000;
+            const posArray = new Float32Array(particlesCount * 3);
+            for (let i = 0; i < particlesCount * 3; i++) {
+                posArray[i] = (Math.random() - 0.5) * 100;
+            }
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+            const particlesMaterial = new THREE.PointsMaterial({
+                size: 0.1,
+                sizeAttenuation: true,
+                color: 0xe67e22,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                opacity: 0.7
+            });
+            
+            const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+            scene.add(particlesMesh);
+
+            camera.position.z = 5;
+
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+
+            const onMouseMove = (event) => {
+                mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+                mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+            };
+
+            const onWindowResize = () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            };
+
+            window.addEventListener('mousemove', onMouseMove, false);
+            window.addEventListener('resize', onWindowResize, false);
+
+            const contentContainer = document.getElementById('content-container');
+            const sections = document.querySelectorAll('.content-section');
+            
+            const updateSections = () => {
+                const scrollY = contentContainer.scrollTop;
+                const windowHeight = window.innerHeight;
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY > sectionTop - windowHeight && scrollY < sectionTop + section.offsetHeight) {
+                        section.classList.add('active');
+                    } else {
+                        section.classList.remove('active');
+                    }
+                });
+            };
+
+            updateSections();
+            contentContainer.addEventListener('scroll', updateSections);
+
+            const animate = () => {
+                requestAnimationFrame(animate);
+                targetX = mouseX * 2;
+                targetY = mouseY * 2;
+                camera.position.x += (targetX - camera.position.x) * 0.05;
+                camera.position.y += (targetY - camera.position.y) * 0.05;
+                camera.lookAt(scene.position);
+                particlesMesh.rotation.x += 0.0001;
+                particlesMesh.rotation.y += 0.0002;
+
+                renderer.render(scene, camera);
+            };
+            
+            animate();
+        };
+    </script>
+</body>
+</html>
