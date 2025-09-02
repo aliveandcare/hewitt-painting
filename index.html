@@ -69,6 +69,22 @@
             padding: 1rem 0;
             z-index: 10;
         }
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* This is what creates the square shape */
+            overflow: hidden;
+            border-radius: 0.75rem;
+        }
+        .image-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.75rem;
+        }
     </style>
 </head>
 <body>
@@ -168,12 +184,24 @@
             <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
             <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Our Work</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <img src="interior.avif" alt="Interior painting example" class="w-full rounded-xl shadow-lg">
-                <img src="exterior.avif" alt="Exterior painting example" class="w-full rounded-xl shadow-lg">
-                <img src="drywall.avif" alt="Drywall repair example" class="w-full rounded-xl shadow-lg">
-                <img src="carpentry.avif" alt="Carpentry example" class="w-full rounded-xl shadow-lg">
-                <img src="power.avif" alt="Power washing example" class="w-full rounded-xl shadow-lg">
-                <img src="handyman.avif" alt="General handyman work example" class="w-full rounded-xl shadow-lg">
+                <div class="image-wrapper">
+                    <img src="interior.avif" alt="Interior painting example" class="shadow-lg">
+                </div>
+                <div class="image-wrapper">
+                    <img src="exterior.avif" alt="Exterior painting example" class="shadow-lg">
+                </div>
+                <div class="image-wrapper">
+                    <img src="drywall.avif" alt="Drywall repair example" class="shadow-lg">
+                </div>
+                <div class="image-wrapper">
+                    <img src="carpentry.avif" alt="Carpentry example" class="shadow-lg">
+                </div>
+                <div class="image-wrapper">
+                    <img src="power.avif" alt="Power washing example" class="shadow-lg">
+                </div>
+                <div class="image-wrapper">
+                    <img src="handyman.avif" alt="General handyman work example" class="shadow-lg">
+                </div>
             </div>
         </div>
     </div>
