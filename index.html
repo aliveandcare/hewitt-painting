@@ -32,7 +32,7 @@
             display: block;
         }
         .content-container {
-            padding-top: 6rem;
+            padding-top: 2rem;
         }
         .content-section {
             min-height: 100vh;
@@ -59,14 +59,12 @@
             box-shadow: 0 0 25px rgba(230, 126, 34, 0.2);
         }
         #footer-section {
-            min-height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             scroll-snap-align: end;
         }
         .company-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
             text-align: center;
             padding: 1rem 0;
             z-index: 10;
@@ -75,12 +73,12 @@
 </head>
 <body>
     <canvas id="webgl-canvas"></canvas>
-    <div class="company-header">
-        <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-widest hero-title">
-            HEWITT PAINTING & HANDYMAN SERVICES
-        </h1>
-    </div>
     <div class="content-container" id="content-container">
+        <div class="company-header">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white tracking-widest hero-title">
+                HEWITT PAINTING & HANDYMAN SERVICES
+            </h1>
+        </div>
         <section class="content-section" id="hero-section">
             <div class="text-center max-w-2xl">
                 <h2 class="text-xl md:text-2xl font-bold text-gray-400 mb-4 leading-tight">
@@ -98,36 +96,36 @@
             <div class="text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Our Comprehensive Services</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-6 section-box">
-                    <div class="p-4 rounded-xl text-white">
+                    <a href="#" class="service-link cursor-pointer p-4 rounded-xl text-white block transition-transform transform hover:-translate-y-2">
                         <div class="text-4xl mb-2">🎨</div>
                         <h3 class="text-xl font-bold">Interior Painting</h3>
                         <p class="text-gray-300 text-sm">Transform your living space with a professional, flawless finish.</p>
-                    </div>
-                    <div class="p-4 rounded-xl text-white">
+                    </a>
+                    <a href="#" class="service-link cursor-pointer p-4 rounded-xl text-white block transition-transform transform hover:-translate-y-2">
                         <div class="text-4xl mb-2">🏠</div>
                         <h3 class="text-xl font-bold">Exterior Painting</h3>
                         <p class="text-gray-300 text-sm">Protect your home and boost its curb appeal with durable paint.</p>
-                    </div>
-                    <div class="p-4 rounded-xl text-white">
+                    </a>
+                    <a href="#" class="service-link cursor-pointer p-4 rounded-xl text-white block transition-transform transform hover:-translate-y-2">
                         <div class="text-4xl mb-2">🔨</div>
                         <h3 class="text-xl font-bold">Drywall & Repairs</h3>
                         <p class="text-gray-300 text-sm">From patching small holes to full replacements, we do it all.</p>
-                    </div>
-                    <div class="p-4 rounded-xl text-white">
+                    </a>
+                    <a href="#" class="service-link cursor-pointer p-4 rounded-xl text-white block transition-transform transform hover:-translate-y-2">
                         <div class="text-4xl mb-2">🪵</div>
                         <h3 class="text-xl font-bold">Carpentry</h3>
                         <p class="text-gray-300 text-sm">We handle a range of carpentry tasks, including trim and molding.</p>
-                    </div>
-                    <div class="p-4 rounded-xl text-white">
+                    </a>
+                    <a href="#" class="service-link cursor-pointer p-4 rounded-xl text-white block transition-transform transform hover:-translate-y-2">
                         <div class="text-4xl mb-2">💦</div>
                         <h3 class="text-xl font-bold">Power Washing</h3>
                         <p class="text-gray-300 text-sm">Revitalize your home's exterior, decks, and patios.</p>
-                    </div>
-                    <div class="p-4 rounded-xl text-white">
+                    </a>
+                    <a href="#" class="service-link cursor-pointer p-4 rounded-xl text-white block transition-transform transform hover:-translate-y-2">
                         <div class="text-4xl mb-2">🔧</div>
                         <h3 class="text-xl font-bold">General Handyman</h3>
                         <p class="text-gray-300 text-sm">Expert help for all those small-to-medium sized projects.</p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -149,10 +147,10 @@
                     Ready to start your project? We're just a phone call or email away. We look forward to hearing from you!
                 </p>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <a href="tel:615-359-4372" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center gap-2">
+                    <a href="tel:615-359-4372" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
                         <span class="text-xl">📞</span> Call
                     </a>
-                    <a href="mailto:hewittpainting01@yahoo.com" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 flex items-center gap-2">
+                    <a href="mailto:hewittpainting01@yahoo.com" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
                         <span class="text-xl">📧</span> Email for Quote
                     </a>
                 </div>
@@ -160,9 +158,24 @@
         </section>
         <footer class="text-gray-500 py-8 footer-style w-full text-center" id="footer-section">
             <div class="container mx-auto px-4">
-                <p class="text-sm">&copy; 2025 Built & Designed by Andrew Thomas</p>
+                <p class="text-sm">&copy; 2025. Site Designed and Built by Andrew Thomas</p>
             </div>
         </footer>
+    </div>
+    
+    <div id="gallery-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900 bg-opacity-95 hidden">
+        <div class="relative w-full max-w-4xl p-8 rounded-xl section-box max-h-screen overflow-y-auto">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-3xl font-bold">&times;</button>
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-center">Our Work</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="interior.avif" alt="Interior painting example" class="w-full rounded-xl shadow-lg">
+                <img src="exterior.avif" alt="Exterior painting example" class="w-full rounded-xl shadow-lg">
+                <img src="drywall.avif" alt="Drywall repair example" class="w-full rounded-xl shadow-lg">
+                <img src="carpentry.avif" alt="Carpentry example" class="w-full rounded-xl shadow-lg">
+                <img src="power.avif" alt="Power washing example" class="w-full rounded-xl shadow-lg">
+                <img src="handyman.avif" alt="General handyman work example" class="w-full rounded-xl shadow-lg">
+            </div>
+        </div>
     </div>
     <script>
         window.onload = function () {
@@ -218,26 +231,6 @@
             window.addEventListener('mousemove', onMouseMove, false);
             window.addEventListener('resize', onWindowResize, false);
 
-            const contentContainer = document.getElementById('content-container');
-            const sections = document.querySelectorAll('.content-section');
-            
-            const updateSections = () => {
-                const scrollY = contentContainer.scrollTop;
-                const windowHeight = window.innerHeight;
-
-                sections.forEach((section, index) => {
-                    const sectionTop = section.offsetTop;
-                    if (scrollY > sectionTop - windowHeight && scrollY < sectionTop + section.offsetHeight) {
-                        section.classList.add('active');
-                    } else {
-                        section.classList.remove('active');
-                    }
-                });
-            };
-
-            updateSections();
-            contentContainer.addEventListener('scroll', updateSections);
-
             const animate = () => {
                 requestAnimationFrame(animate);
                 targetX = mouseX * 2;
@@ -252,6 +245,36 @@
             };
             
             animate();
+
+            const serviceLinks = document.querySelectorAll('.service-link');
+            const galleryModal = document.getElementById('gallery-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+
+            serviceLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    galleryModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                galleryModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+
+            galleryModal.addEventListener('click', (e) => {
+                if (e.target === galleryModal) {
+                    galleryModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            const exploreBtn = document.querySelector('a[href="#services-section"]');
+            exploreBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector('#services-section').scrollIntoView({ behavior: 'smooth' });
+            });
         };
     </script>
 </body>
