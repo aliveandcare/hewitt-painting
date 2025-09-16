@@ -1,0 +1,27 @@
+/* Custom styles to enhance the professional design */
+.font-sans {
+    font-family: 'Roboto', sans-serif;
+}
+.font-serif {
+    font-family: 'Playfair Display', serif;
+}
+.hero-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+.image-wrapper {
+    position: relative;
+    padding-top: 75%; /* 4:3 Aspect Ratio */
+}
+.image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
