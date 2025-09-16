@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewitt Painting & Handyman Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+<style>
+
+:root {
+ --primary-blue: #2563eb;
+ --dark-gray: #1f2937;
+--light-gray: #f3f4f6;
+--text-color: #374151;
+--border-color: #e5e7eb;
+}
+.body-style {
+font-family: 'Roboto', sans-serif;
+background-color: var(--light-gray);
+color: var(--text-color);
+margin: 0;
+padding: 0;
+padding-top: 6rem;
+}
+.font-serif {
+font-family: 'Playfair Display', serif;
+}
+.container {
+max-width: 1200px;
+margin-left: auto;
+margin-right: auto;
+padding: 0 1rem;
+}
+.section-container {
+padding: 4rem 0;
+}
+.bg-white {
+background-color: #fff;
+}
+.bg-light-gray {
+background-color: var(--light-gray);
+}
+.bg-dark-gray {
+background-color: var(--dark-gray);
+}
+.section-title {
+font-family: 'Playfair Display', serif;
+font-size: 2.5rem;
+font-weight: bold;
+text-align: center;
+margin-bottom: 3rem;
+}
+/* Navbar */
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 50;
+background-color: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+padding: 1rem;
+}
+.navbar-content {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.brand {
+font-size: 1.5rem;
+font-weight: bold;
+color: #111827;
+font-family: 'Playfair Display', serif;
+text-decoration: none;
+}
+.nav-links-desktop {
+display: none;
+}
+@media (min-width: 768px) {
+.nav-links-desktop {
+display: flex;
+gap: 2rem;
+}
+.mobile-menu-button {
+display: none;
+}
+}
+.nav-link {
+color: #4b5563;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+.nav-link:hover {
+color: var(--primary-blue);
+}
+/* Hero Section */
+.hero-section {
+background-image: linear-gradient(rgba(31, 41, 55, 0.6), rgba(31, 41, 55, 0.6)), url('images/hero-background.jpg');
+background-size: cover;
+background-position: center;
+padding: 6rem 0;
+text-align: center;
+color: #fff;
+}
+.hero-title {
+font-family: 'Playfair Display', serif;
+font-size: 3rem;
+font-weight: bold;
+line-height: 1.25;
+margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+.hero-title {
+font-size: 4rem;
+}
+}
+.hero-subtitle {
+font-size: 1.125rem;
+margin: 0 auto 2rem;
+max-width: 42rem;
+}
+/* Buttons */
+.btn {
+display: inline-block;
+font-weight: bold;
+padding: 0.75rem 2rem;
+border-radius: 9999px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+text-decoration: none;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.btn:hover {
+transform: scale(1.05);
+}
+.btn-primary {
+background-color: var(--primary-blue);
+color: #fff;
+}
+.btn-primary:hover {
+background-color: #1e40af;
+}
+.btn-secondary {
+background-color: #d1d5db;
+color: #1f2937;
+}
+.btn-secondary:hover {
+background-color: #9ca3af;
+}
+.btn-container {
+text-align: center;
+margin-top: 3rem;
+}
+/* Services Grid */
+.service-grid {
+display: grid;
+grid-template-columns: repeat(1, minmax(0, 1fr));
+gap: 2rem;
+text-align: center;
+}
+@media (min-width: 768px) {
+.service-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+@media (min-width: 1024px) {
+.service-grid {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+.service-card {
+background-color: #fff;
+padding: 1.5rem;
+border-radius: 0.75rem;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+transition: box-shadow 0.3s ease;
+}
+.service-card:hover {
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+.service-icon {
+font-size: 2.25rem;
+margin-bottom: 1rem;
+color: var(--primary-blue);
+}
+.service-heading {
+font-size: 1.25rem;
+font-weight: bold;
+margin-bottom: 0.5rem;
+}
+.service-text {
+color: #4b5563;
+font-size: 0.875rem;
+}
+/* About Section */
+.about-content {
+text-align: center;
+max-width: 48rem;
+margin: 0 auto;
+}
+.about-text {
+color: #4b5563;
+line-height: 1.625;
+margin-bottom: 1rem;
+}
+/* Image Gallery */
+.image-grid {
+display: grid;
+grid-template-columns: repeat(1, minmax(0, 1fr));
+gap: 1.5rem;
+}
+@media (min-width: 640px) {
+.image-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+@media (min-width: 768px) {
+.image-grid {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+@media (min-width: 1024px) {
+.image-grid {
+grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+}
+.image-wrapper {
+position: relative;
+padding-top: 75%;
+border-radius: 0.5rem;
+overflow: hidden;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.image-wrapper img {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.image-wrapper img:hover {
+transform: scale(1.05);
+}
+/* Reviews Form */
+.form-container {
+max-width: 48rem;
+margin: 0 auto;
+}
+.form-subtitle {
+font-size: 1.125rem;
+color: #4b5563;
+margin-bottom: 2rem;
+text-align: center;
+}
+.review-form {
+background-color: #fff;
+padding: 2rem;
+border-radius: 0.75rem;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+margin-bottom: 1rem;
+}
+.form-label {
+display: block;
+color: #374151;
+font-weight: bold;
+margin-bottom: 0.5rem;
+}
+.form-input {
+width: 100%;
+padding: 0.75rem 1rem;
+border: 1px solid var(--border-color);
+border-radius: 0.5rem;
+}
+.form-input:focus {
+outline: none;
+border-color: var(--primary-blue);
+box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
+}
+/* Reviews Display */
+.reviews-grid {
+display: grid;
+grid-template-columns: repeat(1, minmax(0, 1fr));
+gap: 2rem;
+}
+@media (min-width: 768px) {
+.reviews-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+.review-card {
+background-color: var(--light-gray);
+padding: 2rem;
+border-radius: 0.75rem;
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.review-text {
+font-style: italic;
+color: #4b5563;
+margin-bottom: 1rem;
+}
+.review-author {
+font-weight: bold;
+color: #374151;
+}
+.review-rating {
+color: #facc15;
+}
+.loading-text {
+text-align: center;
+color: #6b7280;
+}
+/* Contact Section */
+.contact-container {
+text-align: center;
+max-width: 48rem;
+margin: 0 auto;
+}
+.contact-text {
+font-size: 1.125rem;
+color: #d1d5db;
+margin-bottom: 2rem;
+}
+.contact-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1.5rem;
+}
+@media (min-width: 640px) {
+.contact-buttons {
+flex-direction: row;
+}
+}
+/* Footer */
+.footer {
+background-color: var(--dark-gray);
+color: #9ca3af;
+padding: 2rem 0;
+text-align: center;
+}
+.footer-text {
+font-size: 0.875rem;
+}
+</style>
+</head>
+<body class="body-style">
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <a href="#" class="brand">Hewitt Services</a>
+            <div class="nav-links-desktop">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#gallery" class="nav-link">Our Work</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-button" id="mobile-menu-button">&#9776;</button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="mobile-menu-drawer">
+        <button id="close-mobile-menu" class="close-mobile-menu-button">&times;</button>
+        <div class="mobile-links-container">
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#about" class="mobile-nav-link">About Us</a>
+            <a href="#gallery" class="mobile-nav-link">Our Work</a>
+            <a href="#reviews" class="mobile-nav-link">Reviews</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section class="hero-section" id="hero-section">
+            <div class="container hero-content">
+                <h1 class="hero-title">Hewitt Painting & Handyman Services</h1>
+                <p class="hero-subtitle">Quality You Can See, Service You Can Trust. Providing exceptional services to the greater Nashville area.</p>
+                <a href="#services" class="btn btn-primary">Explore Our Services</a>
+            </div>
+        </section>
+
+        <section class="section-container bg-white" id="services">
+            <div class="container">
+                <h2 class="section-title">Our Comprehensive Services</h2>
+                <div class="service-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3 class="service-heading">Interior Painting</h3>
+                        <p class="service-text">Transform your living space with a professional, flawless finish.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <h3 class="service-heading">Exterior Painting</h3>
+                        <p class="service-text">Protect your home and boost its curb appeal with durable paint.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔨</div>
+                        <h3 class="service-heading">Drywall & Repairs</h3>
+                        <p class="service-text">From patching small holes to full replacements, we do it all.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🪵</div>
+                        <h3 class="service-heading">Carpentry</h3>
+                        <p class="service-text">We handle a range of carpentry tasks, including trim and molding.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💦</div>
+                        <h3 class="service-heading">Power Washing</h3>
+                        <p class="service-text">Revitalize your home's exterior, decks, and patios.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔧</div>
+                        <h3 class="service-heading">General Handyman</h3>
+                        <p class="service-text">Expert help for all those small-to-medium sized projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container bg-light-gray" id="about">
+            <div class="container about-content">
+                <h2 class="section-title">Our Commitment to You</h2>
+                <p class="about-text">
+                    At Hewitt Painting and Handyman Services, we're not just about fixing and painting; we're about building trust. With years of experience serving the Nashville community, we stand by our reputation for meticulous work, clear communication, and unwavering reliability. We treat every home as if it were our own, ensuring every detail is handled with the utmost care.
+                </p>
+                <p class="about-text">
+                    Our dedication to your satisfaction is our top priority. We're a family-owned business, and we look forward to making your home improvement dreams a reality.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-container bg-white" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Our Work</h2>
+                <div class="image-grid">
+                    <div class="image-wrapper"><img src="images/castle1.jpeg" alt="Completed painting project"></div>
+                    <div class="image-wrapper"><img src="images/castle2.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/castle3.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/IMG_8458.png"></div>
+                    <div class="image-wrapper"><img src="images/paint.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/Portfolio.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/Portfolio_036eab60-8eb7-4b26-8933-c1b445c55502.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/Portfolio_1de44264-94a8-4770-bfe0-8779964a33b6.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/Portfolio_aa2170a8-30ac-410d-9260-4340f9867a92.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/Portfolio_d5618105-1e0c-473c-b45d-212b47ff37cc.jpeg"></div>
+                    <div class="image-wrapper"><img src="images/Portfolio_f454c18e-0353-4751-b460-3b15ff2844ae.jpeg"></div>
+                </div>
+                <div class="btn-container">
+                    <a href="#contact" class="btn btn-secondary">View More Projects</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container bg-light-gray" id="submit-review">
+            <div class="container form-container">
+                <h2 class="section-title">Leave a Review</h2>
+                <p class="form-subtitle">We'd love to hear about your experience with our services.</p>
+                
+                <form id="review-form" class="review-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rating" class="form-label">Rating</label>
+                        <select id="rating" name="rating" class="form-input" required>
+                            <option value="">Select a rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="1">⭐</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text" class="form-label">Your Review</label>
+                        <textarea id="review-text" name="review-text" rows="4" class="form-input" required></textarea>
+                    </div>
+                    <div class="btn-container">
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="section-container bg-white" id="reviews">
+            <div class="container">
+                <h2 class="section-title">Customer Reviews</h2>
+                <div id="reviews-display" class="reviews-grid">
+                    <p class="loading-text">Loading reviews...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container bg-dark-gray text-white" id="contact">
+            <div class="container contact-container">
+                <h2 class="section-title">Get Your Free Estimate Today</h2>
+                <p class="contact-text">Ready to start your project? We're just a phone call or email away. We look forward to hearing from you!</p>
+                <div class="contact-buttons">
+                    <a href="tel:615-359-4372" class="btn btn-primary">📞 Call Us</a>
+                    <a href="mailto:hewittpainting01@yahoo.com" class="btn btn-primary">📧 Email for Quote</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Hewitt Painting & Handyman Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+
+    <script>
+        const SANITY_PROJECT_ID = 'awy7nk0xb0sus8esh8wo7sws';
+        const SANITY_DATASET = 'production';
+        document.getElementById('review-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('/api/submit-review', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data),
+                });
+
+                if (response.ok) {
+                    alert('Thank you for your review!');
+                    form.reset();
+                    fetchAndDisplayReviews();
+                } else {
+                    alert('Error submitting review.');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('An error occurred. Please try again later.');
+            }
+        });
+        async function fetchAndDisplayReviews() {
+            const query = encodeURIComponent(`*[_type == "review"] | order(createdAt desc)`);
+            const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${SANITY_DATASET}?query=${query}`;
+            const reviewsContainer = document.getElementById('reviews-display');
+            reviewsContainer.innerHTML = '<p class="loading-text">Loading reviews...</p>';
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Network response was not ok');
+                const { result } = await response.json();
+
+                reviewsContainer.innerHTML = '';
+                if (result.length > 0) {
+                    result.forEach(review => {
+                        const reviewHtml = `
+                            <div class="review-card">
+                                <p class="review-text">"${review.reviewText}"</p>
+                                <div class="review-author">- ${review.name}</div>
+                                <div class="review-rating">${'⭐'.repeat(review.rating)}</div>
+                            </div>
+                        `;
+                        reviewsContainer.innerHTML += reviewHtml;
+                    });
+                } else {
+                    reviewsContainer.innerHTML = '<p class="loading-text">No reviews yet. Be the first to leave one!</p>';
+                }
+            } catch (error) {
+                console.error('Failed to fetch reviews:', error);
+                reviewsContainer.innerHTML = '<p class="loading-text" style="color: red;">Failed to load reviews. Please try again later.</p>';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
+    </script>
+
+</body>
+</html>
