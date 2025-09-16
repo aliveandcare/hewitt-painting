@@ -1,4 +1,3 @@
-/* Custom styles to enhance the professional design */
 .font-sans {
     font-family: 'Roboto', sans-serif;
 }
@@ -16,7 +15,7 @@
 }
 .image-wrapper {
     position: relative;
-    padding-top: 75%; /* 4:3 Aspect Ratio */
+    padding-top: 75%; 
 }
 .image-wrapper img {
     position: absolute;
