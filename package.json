@@ -1,0 +1,23 @@
+{
+  "name": "hewitt-painting",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliveandcare/hewitt-painting.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliveandcare/hewitt-painting/issues"
+  },
+  "homepage": "https://github.com/aliveandcare/hewitt-painting#readme",
+  "description": "",
+  "dependencies": {
+    "@sanity/client": "^7.11.1"
+  }
+}
