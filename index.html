@@ -1,212 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hewitt Painting & Handyman Services</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17525416456"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-17525416456');
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hewitt Painting & Handyman Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17525416456"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-17525416456');
+    </script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
-    
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg py-4 px-8 md:px-16">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-gray-900 font-serif">Hewitt Services</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Services</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">About Us</a>
-                <a href="#gallery" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Our Work</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Testimonials</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</a>
-            </div>
-            <button class="md:hidden text-2xl" id="mobile-menu-button">&#9776;</button>
-        </div>
-    </nav>
+    
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg py-4 px-8 md:px-16">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-900 font-serif">Hewitt Services</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Services</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">About Us</a>
+                <a href="#gallery" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Our Work</a>
+                <a href="#reviews" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Reviews</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl" id="mobile-menu-button">&#9776;</button>
+        </div>
+    </nav>
 
-    <div id="mobile-menu" class="fixed top-0 left-0 right-0 bottom-0 bg-white z-40 hidden p-8">
-        <button id="close-mobile-menu" class="absolute top-4 right-4 text-3xl font-bold">&times;</button>
-        <div class="flex flex-col items-center justify-center h-full space-y-6 text-xl">
-            <a href="#services" class="text-gray-800 hover:text-blue-600 font-medium">Services</a>
-            <a href="#about" class="text-gray-800 hover:text-blue-600 font-medium">About Us</a>
-            <a href="#gallery" class="text-gray-800 hover:text-blue-600 font-medium">Our Work</a>
-            <a href="#testimonials" class="text-gray-800 hover:text-blue-600 font-medium">Testimonials</a>
-            <a href="#contact" class="text-gray-800 hover:text-blue-600 font-medium">Contact</a>
-        </div>
-    </div>
+    <div id="mobile-menu" class="fixed top-0 left-0 right-0 bottom-0 bg-white z-40 hidden p-8">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-3xl font-bold">&times;</button>
+        <div class="flex flex-col items-center justify-center h-full space-y-6 text-xl">
+            <a href="#services" class="text-gray-800 hover:text-blue-600 font-medium">Services</a>
+            <a href="#about" class="text-gray-800 hover:text-blue-600 font-medium">About Us</a>
+            <a href="#gallery" class="text-gray-800 hover:text-blue-600 font-medium">Our Work</a>
+            <a href="#reviews" class="text-gray-800 hover:text-blue-600 font-medium">Reviews</a>
+            <a href="#contact" class="text-gray-800 hover:text-blue-600 font-medium">Contact</a>
+        </div>
+    </div>
 
-    <main class="pt-24">
-        <section class="py-24 md:py-32 text-center bg-gray-900 text-white hero-bg">
-            <div class="container mx-auto px-4">
-                <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4 leading-tight">Hewitt Painting & Handyman Services</h1>
-                <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8">Quality You Can See, Service You Can Trust. Providing exceptional services to the greater Nashville area.</p>
-                <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Explore Our Services</a>
-            </div>
-        </section>
+    <main class="pt-24">
+        <section class="py-24 md:py-32 text-center bg-gray-900 text-white hero-bg">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4 leading-tight">Hewitt Painting & Handyman Services</h1>
+                <p class="text-lg md:text-2xl text-gray-300 max-w-2xl mx-auto mb-8">Quality You Can See, Service You Can Trust. Providing exceptional services to the greater Nashville area.</p>
+                <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">Explore Our Services</a>
+            </div>
+        </section>
 
-        <section id="services" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-serif">Our Comprehensive Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                        <div class="text-5xl mb-4 text-blue-600">🎨</div>
-                        <h3 class="text-xl font-bold mb-2">Interior Painting</h3>
-                        <p class="text-gray-600">Transform your living space with a professional, flawless finish.</p>
-                    </div>
-                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                        <div class="text-5xl mb-4 text-blue-600">🏠</div>
-                        <h3 class="text-xl font-bold mb-2">Exterior Painting</h3>
-                        <p class="text-gray-600">Protect your home and boost its curb appeal with durable paint.</p>
-                    </div>
-                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                        <div class="text-5xl mb-4 text-blue-600">🔨</div>
-                        <h3 class="text-xl font-bold mb-2">Drywall & Repairs</h3>
-                        <p class="text-gray-600">From patching small holes to full replacements, we do it all.</p>
-                    </div>
-                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                        <div class="text-5xl mb-4 text-blue-600">🪵</div>
-                        <h3 class="text-xl font-bold mb-2">Carpentry</h3>
-                        <p class="text-gray-600">We handle a range of carpentry tasks, including trim and molding.</p>
-                    </div>
-                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                        <div class="text-5xl mb-4 text-blue-600">💦</div>
-                        <h3 class="text-xl font-bold mb-2">Power Washing</h3>
-                        <p class="text-gray-600">Revitalize your home's exterior, decks, and patios.</p>
-                    </div>
-                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-                        <div class="text-5xl mb-4 text-blue-600">🔧</div>
-                        <h3 class="text-xl font-bold mb-2">General Handyman</h3>
-                        <p class="text-gray-600">Expert help for all those small-to-medium sized projects.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section id="services" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-serif">Our Comprehensive Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-5xl mb-4 text-blue-600">🎨</div>
+                        <h3 class="text-xl font-bold mb-2">Interior Painting</h3>
+                        <p class="text-gray-600">Transform your living space with a professional, flawless finish.</p>
+                    </div>
+                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-5xl mb-4 text-blue-600">🏠</div>
+                        <h3 class="text-xl font-bold mb-2">Exterior Painting</h3>
+                        <p class="text-gray-600">Protect your home and boost its curb appeal with durable paint.</p>
+                    </div>
+                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-5xl mb-4 text-blue-600">🔨</div>
+                        <h3 class="text-xl font-bold mb-2">Drywall & Repairs</h3>
+                        <p class="text-gray-600">From patching small holes to full replacements, we do it all.</p>
+                    </div>
+                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-5xl mb-4 text-blue-600">🪵</div>
+                        <h3 class="text-xl font-bold mb-2">Carpentry</h3>
+                        <p class="text-gray-600">We handle a range of carpentry tasks, including trim and molding.</p>
+                    </div>
+                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-5xl mb-4 text-blue-600">💦</div>
+                        <h3 class="text-xl font-bold mb-2">Power Washing</h3>
+                        <p class="text-gray-600">Revitalize your home's exterior, decks, and patios.</p>
+                    </div>
+                    <div class="service-card p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+                        <div class="text-5xl mb-4 text-blue-600">🔧</div>
+                        <h3 class="text-xl font-bold mb-2">General Handyman</h3>
+                        <p class="text-gray-600">Expert help for all those small-to-medium sized projects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section id="about" class="py-16 md:py-24 bg-gray-200">
-            <div class="container mx-auto px-4 max-w-4xl text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">Our Commitment to You</h2>
-                <p class="text-lg text-gray-600 leading-relaxed mb-4">
-                    At Hewitt Painting and Handyman Services, we're not just about fixing and painting; we're about building trust. With years of experience serving the Nashville community, we stand by our reputation for meticulous work, clear communication, and unwavering reliability. We treat every home as if it were our own, ensuring every detail is handled with the utmost care.
-                </p>
-                <p class="text-lg text-gray-600 leading-relaxed">
-                    Our dedication to your satisfaction is our top priority. We're a family-owned business, and we look forward to making your home improvement dreams a reality.
-                </p>
-            </div>
-        </section>
-        
-        <section id="gallery" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-serif">Our Work</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/castle1.jpeg" alt="Completed painting project" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/castle2.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/castle3.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/IMG_8458.png" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/paint.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/Portfolio.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/Portfolio_036eab60-8eb7-4b26-8933-c1b445c55502.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/Portfolio_1de44264-94a8-4770-bfe0-8779964a33b6.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/Portfolio_aa2170a8-30ac-410d-9260-4340f9867a92.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/Portfolio_d5618105-1e0c-473c-b45d-212b47ff37cc.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
-                        <img src="images/Portfolio_f454c18e-0353-4751-b460-3b15ff2844ae.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
-                    </div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="#contact" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-8 rounded-full transition-colors transform hover:scale-105">View More Projects</a>
-                </div>
-            </div>
-        </section>
+        <section id="about" class="py-16 md:py-24 bg-gray-200">
+            <div class="container mx-auto px-4 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">Our Commitment to You</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                    At Hewitt Painting and Handyman Services, we're not just about fixing and painting; we're about building trust. With years of experience serving the Nashville community, we stand by our reputation for meticulous work, clear communication, and unwavering reliability. We treat every home as if it were our own, ensuring every detail is handled with the utmost care.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Our dedication to your satisfaction is our top priority. We're a family-owned business, and we look forward to making your home improvement dreams a reality.
+                </p>
+            </div>
+        </section>
+        
+        <section id="gallery" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-serif">Our Work</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/castle1.jpeg" alt="Completed painting project" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/castle2.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/castle3.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/IMG_8458.png" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/paint.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/Portfolio.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/Portfolio_036eab60-8eb7-4b26-8933-c1b445c55502.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/Portfolio_1de44264-94a8-4770-bfe0-8779964a33b6.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/Portfolio_aa2170a8-30ac-410d-9260-4340f9867a92.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/Portfolio_d5618105-1e0c-473c-b45d-212b47ff37cc.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                    <div class="image-wrapper shadow-lg rounded-lg overflow-hidden">
+                        <img src="images/Portfolio_f454c18e-0353-4751-b460-3b15ff2844ae.jpeg" class="w-full h-full object-cover transition-transform transform hover:scale-105">
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#contact" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-8 rounded-full transition-colors transform hover:scale-105">View More Projects</a>
+                </div>
+            </div>
+        </section>
 
-        <section id="testimonials" class="py-16 md:py-24 bg-gray-200">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-serif">What Our Clients Say</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <p class="text-lg italic text-gray-700 mb-4">"Hewitt Services did an incredible job on our kitchen remodel. The paint work was perfect and the repairs were done with such care. Highly recommend!"</p>
-                        <p class="font-bold text-gray-800">- Jane D., Nashville</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg">
-                        <p class="text-lg italic text-gray-700 mb-4">"Professional, timely, and their attention to detail is unmatched. They power washed our deck and it looks brand new. Couldn't be happier with the results."</p>
-                        <p class="font-bold text-gray-800">- Mark S., Franklin</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+       <section id="submit-review" class="py-16 md:py-24 bg-gray-200">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 font-serif">Leave a Review</h2>
+                <p class="text-lg text-gray-600 mb-8 text-center">We'd love to hear about your experience with our services.</p>
+                
+                <form id="review-form" class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="rating" class="block text-gray-700 font-bold mb-2">Rating</label>
+                        <select id="rating" name="rating" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                            <option value="">Select a rating</option>
+                            <option value="5">⭐⭐⭐⭐⭐</option>
+                            <option value="4">⭐⭐⭐⭐</option>
+                            <option value="3">⭐⭐⭐</option>
+                            <option value="2">⭐⭐</option>
+                            <option value="1">⭐</option>
+                        </select>
+                    </div>
+                    <div class="mb-6">
+                        <label for="review-text" class="block text-gray-700 font-bold mb-2">Your Review</label>
+                        <textarea id="review-text" name="review-text" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                            Submit Review
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
-        <section id="contact" class="py-16 md:py-24 bg-gray-900 text-white text-center">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">Get Your Free Estimate Today</h2>
-                <p class="text-lg text-gray-300 mb-8">Ready to start your project? We're just a phone call or email away. We look forward to hearing from you!</p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <a href="tel:615-359-4372" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
-                        <span class="text-xl">📞</span> Call Us
-                    </a>
-                    <a href="mailto:hewittpainting01@yahoo.com" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
-                        <span class="text-xl">📧</span> Email for Quote
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        <section id="reviews" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 max-w-5xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 font-serif">Customer Reviews</h2>
+                
+                <div id="reviews-display" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <p class="text-center text-gray-500">Loading reviews...</p>
+                </div>
+            </div>
+        </section>
 
-    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
-        <div class="container mx-auto px-4">
-            <p class="text-sm">&copy; 2025 Hewitt Painting & Handyman Services. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <section id="contact" class="py-16 md:py-24 bg-gray-900 text-white text-center">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 font-serif">Get Your Free Estimate Today</h2>
+                <p class="text-lg text-gray-300 mb-8">Ready to start your project? We're just a phone call or email away. We look forward to hearing from you!</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="tel:615-359-4372" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                        <span class="text-xl">📞</span> Call Us
+                    </a>
+                    <a href="mailto:hewittpainting01@yahoo.com" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                        <span class="text-xl">📧</span> Email for Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-        const mobileLinks = mobileMenu.querySelectorAll('a');
+    <footer class="bg-gray-800 text-gray-400 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-sm">&copy; 2025 Hewitt Painting & Handyman Services. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        });
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
 
-        closeMobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            document.body.style.overflow = '';
-        });
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                document.body.style.overflow = '';
-            });
-        });
-    </script>
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+    <script>
+    const SANITY_PROJECT_ID = 'awy7nk0xb0sus8esh8wo7sws';
+    const SANITY_DATASET = 'production';
+    document.getElementById('review-form').addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('/api/submit-review', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                alert('Thank you for your review!');
+                form.reset();
+                fetchAndDisplayReviews();
+            } else {
+                alert('Error submitting review.');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('An error occurred. Please try again later.');
+        }
+    });
+    async function fetchAndDisplayReviews() {
+        const query = encodeURIComponent(`*[_type == "review"] | order(createdAt desc)`);
+        const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${SANITY_DATASET}?query=${query}`;
+        const reviewsContainer = document.getElementById('reviews-display');
+        reviewsContainer.innerHTML = '<p class="text-center text-gray-500">Loading reviews...</p>';
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Network response was not ok');
+            const { result } = await response.json();
+
+            reviewsContainer.innerHTML = '';
+            if (result.length > 0) {
+                result.forEach(review => {
+                    const reviewHtml = `
+                        <div class="bg-gray-100 p-8 rounded-xl shadow-lg">
+                            <p class="text-lg italic text-gray-700 mb-4">"${review.reviewText}"</p>
+                            <div class="font-bold text-gray-800">- ${review.name}</div>
+                            <div class="text-yellow-500">${'⭐'.repeat(review.rating)}</div>
+                        </div>
+                    `;
+                    reviewsContainer.innerHTML += reviewHtml;
+                });
+            } else {
+                reviewsContainer.innerHTML = '<p class="text-center text-gray-500">No reviews yet. Be the first to leave one!</p>';
+            }
+        } catch (error) {
+            console.error('Failed to fetch reviews:', error);
+            reviewsContainer.innerHTML = '<p class="text-center text-red-500">Failed to load reviews. Please try again later.</p>';
+        }
+    }
+    document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
+</script>
 </body>
 </html>
