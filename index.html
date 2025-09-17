@@ -17,14 +17,12 @@
     --border-color: #e5e7eb;
 }
 
-/* General Body & Utility Styles */
 .body-style {
     font-family: 'Roboto', sans-serif;
     background-color: var(--light-gray);
     color: var(--text-color);
     margin: 0;
     padding: 0;
-    /* Adjusted padding to better match navbar height */
     padding-top: 5rem; 
 }
 
@@ -55,17 +53,14 @@
     margin-bottom: 3rem;
 }
 
-/* Added rule to make title white on dark backgrounds */
 .bg-dark-gray .section-title {
     color: #fff;
 }
 
-/* Added utility class for JavaScript */
 .hidden {
     display: none !important;
 }
 
-/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -106,7 +101,6 @@
     color: var(--primary-blue);
 }
 
-/* Mobile Menu Button */
 .mobile-menu-button {
     background: none;
     border: none;
@@ -125,7 +119,6 @@
     }
 }
 
-/* --- NEW MOBILE MENU STYLES --- */
 .mobile-menu-drawer {
     position: fixed;
     top: 0;
@@ -164,10 +157,6 @@
     text-decoration: none;
     font-weight: 500;
 }
-/* --- END NEW STYLES --- */
-
-
-/* Hero Section */
 .hero-section {
     background-image: linear-gradient(rgba(31, 41, 55, 0.6), rgba(31, 41, 55, 0.6)), url('images/hero-background.jpg');
     background-size: cover;
@@ -197,7 +186,6 @@
     max-width: 42rem;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     font-weight: bold;
@@ -235,7 +223,6 @@
     margin-top: 3rem;
 }
 
-/* Services Grid */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -283,7 +270,6 @@
     font-size: 0.875rem;
 }
 
-/* About Section */
 .about-content {
     text-align: center;
     max-width: 48rem;
@@ -295,8 +281,6 @@
     line-height: 1.625;
     margin-bottom: 1rem;
 }
-
-/* Image Gallery */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -329,7 +313,6 @@
     transform: scale(1.05);
 }
 
-/* Reviews Form */
 .form-container {
     max-width: 48rem;
     margin: 0 auto;
@@ -365,7 +348,7 @@
     padding: 0.75rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    box-sizing: border-box; /* Added for consistency */
+    box-sizing: border-box; 
 }
 
 .form-input:focus {
@@ -373,8 +356,6 @@
     border-color: var(--primary-blue);
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.5);
 }
-
-/* Reviews Display */
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -388,7 +369,7 @@
 }
 
 .review-card {
-    background-color: #fff; /* Changed for better contrast */
+    background-color: #fff;
     padding: 2rem;
     border-radius: 0.75rem;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -414,7 +395,6 @@
     color: #6b7280;
 }
 
-/* Contact Section */
 .contact-container {
     text-align: center;
     max-width: 48rem;
@@ -441,7 +421,6 @@
     }
 }
 
-/* Footer */
 .footer {
     background-color: var(--dark-gray);
     color: #9ca3af;
@@ -642,8 +621,6 @@
     </script>
 
     <script>
-        // NOTE: Your Sanity Project ID seems to be invalid or incomplete. 
-        // I've used it as-is, but you may need to replace it with the correct one.
         const SANITY_PROJECT_ID = 'ewyv8hh1';
         const SANITY_DATASET = 'production';
 
@@ -651,8 +628,6 @@
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
-            // Ensure the review text field name matches what the backend expects.
-            // Changed 'review-text' to 'reviewText' to be a valid JS property.
             const data = {
                 name: formData.get('name'),
                 rating: parseInt(formData.get('rating'), 10),
@@ -660,7 +635,6 @@
             };
 
             try {
-                // This will likely fail until a serverless function is created at this endpoint
                 const response = await fetch('/api/submit-review', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
